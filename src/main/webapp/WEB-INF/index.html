@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Backbone.Marionette CRUD</title>
+    <link rel="stylesheet" type="text/css" href="external/bootstrap/css/bootstrap.min.css">
+
+    <script src="external/jquery/jquery-2.1.4.min.js"></script>
+    <script src="external/bootstrap/js/bootstrap.js"></script>
+    <script src="external/underscore/underscore-min.js"></script>
+    <script src="external/backbone/backbone.js"></script>
+    <script src="external/marionette/backbone.marionette.js"></script>
+    <script src="external/bootbox/bootbox.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <script type="text/template" id="contacts">
+        <table class="table">
+            <tbody>
+            </tbody>
+        </table>
+        <div>
+            <button type="button" class="btn btn-xs btn-success js-new">Create contact</button>
+        </div>
+    </script>
+
+
+    <script type="text/template" id="person">
+        <td><%= name %></td>
+        <td>
+            <button type="button" class="btn btn-xs btn-warning js-edit">Edit</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-xs btn-danger js-delete">Delete</button>
+        </td>
+    </script>
+
+</head>
+<body>
+<div class="container">
+    <h1>Contacts</h1>
+
+    <div id="application"></div>
+</div>
+</body>
+</html>
