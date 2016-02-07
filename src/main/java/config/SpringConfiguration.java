@@ -30,7 +30,8 @@ public class SpringConfiguration extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/external/**").addResourceLocations("/WEB-INF/external/");
+        registry.addResourceHandler("/bower_components/**")
+                .addResourceLocations("/WEB-INF/bower_components/");
         registry.addResourceHandler("/js/**").addResourceLocations("/WEB-INF/js/");
         registry.addResourceHandler("/css/**").addResourceLocations("/WEB-INF/css/");
     }

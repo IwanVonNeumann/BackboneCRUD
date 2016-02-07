@@ -3,4 +3,6 @@
 target
 jar
 
+bower_components
+
 *.iml

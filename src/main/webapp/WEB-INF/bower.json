@@ -1,0 +1,22 @@
+{
+  "name": "Backbone CRUD example",
+  "homepage": "https://github.com/IwanVonNeumann/BackboneCRUD",
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "underscore": "^1.8.3",
+    "backbone": "^1.2.3",
+    "backbone.marionette": "^2.4.4",
+    "bootstrap": "^3.3.6",
+    "bootbox.js": "bootbox#^4.4.0"
+  }
+}
