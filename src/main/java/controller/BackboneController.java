@@ -1,6 +1,6 @@
 package controller;
 
-import dao.PersonDao;
+import dao.PersonRepository;
 import domain.Person;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class BackboneController {
     private final Logger log = Logger.getLogger(BackboneController.class);
 
     @Autowired
-    PersonDao personDao;
+    PersonRepository personDao;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String homePage() {
@@ -37,7 +37,7 @@ public class BackboneController {
     public
     @ResponseBody
     Collection<Person> getContactsList() {
-        return personDao.getList();
+        return (Collection<Person>) personDao.findAll();
     }
 
     @RequestMapping(value = "/contacts", produces = "application/json", method = RequestMethod.POST)
@@ -53,7 +53,7 @@ public class BackboneController {
     public
     @ResponseBody
     Person update(@RequestBody Person person) {
-        return personDao.update(person);
+        return personDao.save(person);
     }
 
     @RequestMapping(value = "/contacts/{id}", produces = "application/json", method = RequestMethod.DELETE)

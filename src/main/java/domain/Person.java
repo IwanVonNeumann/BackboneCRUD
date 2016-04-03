@@ -1,11 +1,20 @@
 package domain;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * Created by Iwan on 02.08.2015
  */
 
+@Entity
 public class Person {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     private String name;
 
@@ -14,11 +23,6 @@ public class Person {
     }
 
     public Person(String name) {
-        this.name = name;
-    }
-
-    public Person(String id, String name) {
-        this.id = id;
         this.name = name;
     }
 
